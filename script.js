@@ -41,7 +41,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.service-card, .why-card, .about-content, .contact-content').forEach(el => {
+document.querySelectorAll('.service-card, .why-card, .about-content, .contact-content, .cert-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

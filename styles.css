@@ -250,17 +250,46 @@ img {
     margin-top: 50px;
 }
 
-.about-image-placeholder {
+.about-video {
     width: 100%;
-    aspect-ratio: 3/4;
-    background: linear-gradient(135deg, var(--sand), var(--sand-dark));
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
     border-radius: var(--radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gray);
-    font-style: italic;
     box-shadow: var(--shadow);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.about-extras {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.about-label {
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.profile-link {
+    color: var(--sunset-orange);
+    font-weight: 600;
+    transition: color var(--transition);
+}
+
+.profile-link:hover {
+    color: var(--ocean-blue);
 }
 
 .about-text .lead {
@@ -363,6 +392,76 @@ img {
     color: var(--text-light);
     font-size: 0.95rem;
     line-height: 1.7;
+}
+
+/* ===== Certifications ===== */
+.certifications {
+    background: var(--white);
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.cert-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: var(--gray-light);
+    border-radius: 10px;
+    transition: all var(--transition);
+}
+
+.cert-item:hover {
+    background: var(--sand);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.cert-badge {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--navy), var(--ocean-blue));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cert-badge.gold {
+    background: linear-gradient(135deg, #b8860b, #daa520);
+}
+
+.cert-badge.scarlet {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+}
+
+.cert-badge.silver {
+    background: linear-gradient(135deg, #7f8c8d, #bdc3c7);
+}
+
+.cert-badge.violet {
+    background: linear-gradient(135deg, #6c3483, #8e44ad);
+}
+
+.cert-badge.viking {
+    background: linear-gradient(135deg, #1a3a5c, #2980b9);
+}
+
+.cert-item span {
+    font-size: 0.88rem;
+    color: var(--text);
+    font-weight: 500;
+    line-height: 1.3;
 }
 
 /* ===== Contact ===== */
@@ -529,13 +628,17 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .about-content {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
-    .about-image-placeholder {
-        max-width: 350px;
+    .about-video {
+        max-width: 560px;
         margin: 0 auto;
     }
 
@@ -591,6 +694,10 @@ img {
     }
 
     .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-grid {
         grid-template-columns: 1fr;
     }
 
