@@ -48,21 +48,10 @@ document.querySelectorAll('.service-card, .why-card, .about-content, .contact-co
     observer.observe(el);
 });
 
-// Contact form handling
+// Contact form submission feedback
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-    const action = contactForm.getAttribute('action');
-    if (action.includes('YOUR_FORM_ID')) {
-        e.preventDefault();
-        const name = contactForm.querySelector('input[name="name"]').value;
-        const subject = encodeURIComponent('New Trip Inquiry from ' + name);
-        const body = encodeURIComponent(
-            'Name: ' + name + '\n' +
-            'Email: ' + contactForm.querySelector('input[name="email"]').value + '\n' +
-            'Phone: ' + contactForm.querySelector('input[name="phone"]').value + '\n' +
-            'Interest: ' + contactForm.querySelector('select[name="interest"]').value + '\n\n' +
-            contactForm.querySelector('textarea[name="message"]').value
-        );
-        window.location.href = 'mailto:Alexandra@SashasHappyAdventures.com?subject=' + subject + '&body=' + body;
-    }
+contactForm.addEventListener('submit', () => {
+    const btn = contactForm.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
 });
