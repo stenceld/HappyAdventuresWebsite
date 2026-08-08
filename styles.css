@@ -520,15 +520,22 @@ img {
 }
 
 .footer-logo {
-    height: 50px;
+    height: 80px;
     width: auto;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.footer-logo.affiliate-logo {
+    background: var(--white);
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 .footer-tagline {
-    font-style: italic;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.3px;
 }
 
 .footer-links {
@@ -544,27 +551,6 @@ img {
 
 .footer-links a:hover {
     color: var(--sunset-light);
-}
-
-.footer-affiliate {
-    text-align: center;
-    padding: 20px 0;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.affiliate-logo {
-    height: 90px;
-    width: auto;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 12px 24px;
-    border-radius: 10px;
-    transition: transform var(--transition);
-}
-
-.affiliate-logo:hover {
-    transform: translateY(-2px);
 }
 
 .footer-bottom {
